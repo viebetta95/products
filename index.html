@@ -526,10 +526,44 @@
                 padding: 0 1rem;
             }
         }
+
+        .popup-overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7); /* Background gelap */
+      z-index: 9999;
+      display: flex;               /* Aktifkan flexbox */
+      justify-content: center;     /* Horizontal center */
+      align-items: center;         /* Vertical center */
+    }
+
+    /* Kotak popup */
+    .popup-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+
+    /* Gambar responsive */
+    .popup-content img {
+      width: 400px; /* bisa diubah sesuai kebutuhan */
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    }
     </style>
 </head>
 <body>
     <!-- Navigation -->
+    <div class="popup-overlay">
+    <div class="popup-content">
+      <a href="https://hr1.lol/signup?ref=senjiki" target="_blank" onclick="trackBannerClick('popup_banner', 'https://hr1.lol/signup?ref=senjiki')">
+        <img src="/assets/images/daftar.gif" alt="Popup Promo">
+      </a>
+    </div>
+  </div>
     <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">PT DIGITAL INTI JAYA</a>
